@@ -68,3 +68,24 @@ library(tidyverse)
 
 ::: {#refs custom-style="Bibliography"}
 :::
+
+
+<!-- Create an appendix with new page, table, and figure numbers. -->
+
+\clearpage
+\onecolumn
+
+\begin{center}
+\textbf{Supplementary online material to \emph{Title} (Authors)}
+\end{center}
+
+<!-- Prepend table & figure numbers with S and reset counters -->
+\setcounter{page}{1}
+\setcounter{table}{0}
+\setcounter{figure}{0}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+
+```{r include-only-for-pdf}
+#| include: !expr knitr::is_latex_output()
+```
