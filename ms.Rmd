@@ -75,9 +75,7 @@ library(tidyverse)
 \clearpage
 \onecolumn
 
-\begin{center}
-\textbf{Supplementary online material to \emph{Title} (Authors)}
-\end{center}
+# Supplementary online material to Title (Authors)
 
 <!-- Prepend table & figure numbers with S and reset counters -->
 \setcounter{page}{1}
