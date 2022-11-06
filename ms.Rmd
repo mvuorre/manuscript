@@ -35,17 +35,13 @@ bibliography: "references.bib"
 floatsintext: yes
 linenumbers: yes
 draft: no
-mask: yes
+mask: no
 figurelist: no
 tablelist: no
 footnotelist: no
-header-includes:
-  - |
-    \setlength{\parskip}{0pt}
-    \setlength\parindent{24pt}
 csl: "`r system.file('rmd', 'apa7.csl', package = 'papaja')`"
 documentclass: apa7
-classoption: doc
+classoption: jou
 output: 
   papaja::apa6_pdf:
     number_sections: false
@@ -56,11 +52,13 @@ output:
 
 ```{r setup, include = FALSE}
 library(papaja)
-library(brms)
-library(tidyverse)
+
+# Parallel computation options
+MAX_CORES <- as.numeric(Sys.getenv("MAX_CORES"))
+if (is.na(MAX_CORES)) MAX_CORES <- parallel::detectCores(logical = FALSE)
 ```
 
-
+R [@rcoreteamLanguageEnvironmentStatistical2022]
 
 \clearpage
 
