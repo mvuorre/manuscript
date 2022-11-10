@@ -30,5 +30,5 @@ docker run \
     -v "/home/renv/library" \
     -e MAX_CORES=1 \
     manuscript \
-    R -e 'renv::restore(prompt = FALSE); rmarkdown::render("ms.Rmd", "all")'
+    R -e 'setwd("/home"); renv::restore(prompt = FALSE); rmarkdown::render("ms.Rmd", "all")'
 ```
